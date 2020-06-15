@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="MeuCss.css" />
+        <title>Inclusão de Endereço</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>INCLUSÃO DE NOVO ENDEREÇO</h1>
+            
+            <table>
+                <tbody class="container">
+                    <tr>
+                        <td> <h:outputLabel value="ENDEREÇO"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.endereco}" maxlength="255" size="80" />  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="COMPLEMENTO"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.endereco2}" maxlength="255" size="80" /> </td>
+                    </tr>
+                     <tr>
+                        <td> <h:outputLabel value="BAIRRO"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.bairro}" maxlength="100" size="20" /> </td>
+                    </tr>
+                     <tr>
+                        <td> <h:outputLabel value="ID DA CIDADE"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.cidade_id.cidade_id}" maxlength="100" size="50" /> </td>
+                    </tr>
+                     <tr>
+                        <td> <h:outputLabel value="CEP"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.cep}" maxlength="100" size="20" /> </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="TELEFONE"/> </td>
+                        <td> <h:inputText value="#{EnderecoController.endereco.telefone}" maxlength="100" size="20" /> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <h:commandButton value="Voltar" action="voltaParaEnderecoListagem" />
+            <h:commandButton value="Gravar" action="#{enderecoController.finalizaInclusao()}" />
+            
+        </h:form>
+    </h:body>
+</html>
+

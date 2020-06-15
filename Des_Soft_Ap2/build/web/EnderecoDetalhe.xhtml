@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="MeuCss.css" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>DETALHES DE UM ENDEREÇO</h1>
+            
+            <h:outputLabel value="CÓDIGO:"/>;
+            <h:outputLabel value="#{EnderecoController.endereco.endereco_id}"/>
+            <br/><br/>
+                   
+            <h:outputLabel value="ENDEREÇO: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.endereco}" />
+            <br/><br/>
+            
+            <h:outputLabel value="COMPLEMENTO: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.endereco2}" />
+            <br/><br/>
+            
+            <h:outputLabel value="BAIRRO: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.bairro}" />
+            <br/><br/>
+            
+            <h:outputLabel value="CEP: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.cep}" />
+            <br/><br/>
+            
+            <h:outputLabel value="TELEFONE: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.telefone}"/>
+            <br/><br/>
+            
+            <h:outputLabel value="CIDADE: "/>;
+            <h:outputLabel value="#{EnderecoController.endereco.cidade_id.cidade_id}"/>
+            <br/><br/>
+            
+            
+            <h:commandButton value="Voltar" action="voltaParaEnderecoListagem" />;
+            <h:commandButton value="Editar" action="vaiParaEnderecoEditar"/>
+            
+        </h:form>
+    </h:body>
+</html>
